@@ -881,7 +881,28 @@ section {
   background-size: cover;
   padding: 120px 0;
 }
+.cta ul {
+  list-style: none;
+  padding: 0;
+}
 
+.cta ul li {
+  padding-left: 28px;
+  position: relative;
+}
+
+.cta ul li+li {
+  margin-top: 10px;
+}
+
+.cta ul i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 20px;
+  color: #47b2e4;
+  line-height: 1;
+}
 .cta h3 {
   color: #fff;
   font-size: 28px;
