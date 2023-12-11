@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Cera Pro';
-  src: url('../fonts/CeraPro-Bold.ttf') format('ttf'),
-       url('../fonts/CeraPro-Bold.woff') format('woff');
+  src: url('../fonts/CeraPro-Regular.ttf') format('ttf'),
+       url('../fonts/CeraPro-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
@@ -25,6 +25,7 @@
   --button-color: linear-gradient(90deg, #016DF1 5.01%, #059BF6 85.65%);
   --button-color-hover: linear-gradient(90deg, #253B56 5.01%, #1F6FA0 85.65%);
   --background-darkblue-color: #010721;
+  --des-grad-color: linear-gradient(90deg, #0061F0 0%, #06A7F7 100%);
 }
 body {
   font-family: "Cera Pro", sans-serif;
@@ -140,7 +141,7 @@ h6 {
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -182,10 +183,11 @@ h6 {
   justify-content: space-between;
   padding: 10px 0 10px 30px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 700;
   color: #fff;
   white-space: nowrap;
   transition: 0.3s;
+
 }
 
 .navbar a i,
@@ -349,6 +351,21 @@ h6 {
   padding: 10px 20px;
   font-size: 15px;
   color: #37517e;
+  font-weight: 700;
+}
+.soc-icons-h {
+  display: flex;
+  max-width: 30px;
+  max-height: 30px;
+}
+.social-icons-mobile a {
+  padding: 0 5px;
+  margin: 0;
+  outline: none;
+}
+.social-icons-mobile {
+  display: flex;
+  margin-left: 25px;
 }
 
 .navbar-mobile a:hover,
@@ -362,38 +379,7 @@ h6 {
   margin: 15px;
   color: #37517e;
 }
-.soc-icons-h button {
-  display: flex; /* Робимо посилання flex-контейнером */
-  align-items: center; /* Центруємо вміст по вертикалі */
-  text-decoration: none; /* Видаляємо стандартне оформлення тексту */
-  color: #fff; /* Колір тексту (змініть за потребою) */
-  background-color: transparent;
-  border: none;
-  color: inherit;
-  font: inherit;
-  cursor: pointer;
-  padding: 0;
-  margin: 0;
-  outline: none;
-}
 
-.soc-icons-h ul {
-  display: flex; /* Додаємо flex тільки для ul в soc-icons-h */
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.soc-icons-h i {
-  font-size: 25px; /* Збільшити розмір іконок */
-  margin-right: 5px;
-}
-
-.soc-icons-h span {
-  font-size: 16px; /* Збільшити розмір тексту */
-  display: flex;
-  align-items: center;
-}
 .navbar-mobile .dropdown ul {
   position: static;
   display: none;
@@ -444,7 +430,7 @@ h6 {
 
 #hero h1 {
   margin: 0 0 20px 0;
-  font-size: 68px;
+  font-size: 62px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
@@ -454,7 +440,8 @@ h6 {
   color: #027CF3;
   margin-bottom: 50px;
   margin-left: 20px;
-  font-size: 34px;
+  font-size: 31px;
+  font-weight: 700;
 }
 
 #hero .btn-get-started {
@@ -504,7 +491,10 @@ h6 {
     height: 100vh;
     text-align: center;
   }
-
+  .social-icons-mobile {
+   
+    margin: 10px;
+  }
   #hero .animated {
     animation: none;
   }
@@ -580,9 +570,25 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #37517e;
+  background-image: var(--des-grad-color); 
+  -webkit-background-clip: text; 
+  color: transparent; 
 }
 
+
+.section-title h2::after {
+  content: attr(data-text); 
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--des-grad-color); 
+  -webkit-background-clip: text; 
+  color: transparent; 
+  z-index: -1; 
+}
 .section-title h2::before {
   content: "";
   position: absolute;
@@ -646,9 +652,15 @@ section {
   font-size: 26px;
 }
 
+.about h2 {
+  font-weight: 700;
+  
+}
 .about .content ul {
   list-style: none;
-  padding: 0;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 21px;
 }
 
 .about .content ul li {
@@ -1083,7 +1095,7 @@ section {
 .team .member .pic {
   overflow: hidden;
   width: 180px;
-  border-radius: 50%;
+  border-radius: 5%;
 }
 
 .team .member .pic img {
@@ -1583,22 +1595,7 @@ section {
   height: 36px;
   transition: 0.3s;
 }
-.soc-icons-h {
-  padding: 8px 4px;
-  display: inline-block;
-  background: var(--button-color);
-  color: #fff;
-  line-height: 1;
-  margin-left: 10px;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
-.soc-icons-h:hover {
-  background: var(--button-color-hover);
-}
+
 #footer .footer-top .social-links a:hover {
   background: #209dd8;
   color: #fff;
