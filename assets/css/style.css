@@ -889,6 +889,7 @@ section {
 .cta ul li {
   padding-left: 28px;
   position: relative;
+  color: #fff;
 }
 
 .cta ul li+li {
