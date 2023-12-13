@@ -1,24 +1,21 @@
 @font-face {
-  font-family: 'Cera Pro';
-  src: url('../fonts/CeraPro-Regular.ttf') format('ttf'),
-       url('../fonts/CeraPro-Regular.woff') format('woff');
+  font-family: 'Zona Pro';
+  src: url('../fonts/ZonaPro-Regular.ttf') format('ttf');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Cera Pro';
-  src: url('../fonts/CeraPro-Black.ttf') format('ttf'),
-       url('../fonts/CeraPro-Black.woff') format('woff');
+  font-family: 'Zona Pro';
+  src: url('../fonts/ZonaPro-Bold.ttf') format('ttf');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Cera Pro';
-  src: url('../fonts/CeraPro-Bold.ttf') format('ttf'),
-       url('../fonts/CeraPro-Bold.woff') format('woff');
-  font-weight: 300;
+  font-family: 'Zona Pro';
+  src: url('../fonts/ZonaPro-ExtraBold.ttf') format('ttf');
+  font-weight: 800;
   font-style: normal;
 }
 :root {
@@ -28,7 +25,7 @@
   --des-grad-color: linear-gradient(90deg, #0061F0 0%, #06A7F7 100%);
 }
 body {
-  font-family: "Cera Pro", sans-serif;
+  font-family: "Zona Pro", sans-serif;
   color: #444444;
 }
 
@@ -48,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Cera Pro", sans-serif;
+  font-family: "Zona Pro", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -1130,6 +1127,7 @@ section {
 
 .team .member .member-info {
   padding-left: 30px;
+  max-width: 250px;
 }
 
 .team .member h4 {
